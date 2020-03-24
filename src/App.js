@@ -22,7 +22,7 @@ const App = (props) => {
     setSaturation(Math.round(Math.random() * 100))
     setLight(Math.round(Math.random() * 100))
   }
-  const newColor = `hsl(${hue}. ${saturation}%, ${light}%)`
+  const newColor = `hsl(${hue}, ${saturation}%, ${light}%)`
   console.log(newColor)
 
   return (
@@ -34,9 +34,7 @@ const App = (props) => {
             className="color-box"
             style={{ backgroundColor: newColor }}
           ></div>
-          <text>
-            Color is currently hsl({hue},{saturation}%,{light}%)
-          </text>
+          <text>Color is currently {newColor}</text>
           <br></br>
           <button onClick={randomButton}>Random Color</button>
         </div>
